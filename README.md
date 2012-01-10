@@ -160,4 +160,24 @@ GitHub can now view your new file at
 
 (with your username instead of mine).
 
+## Step 10a: Set the correct default upstream ##
+
+Ok so you guys won’t be able to push into the repository because the one I
+told you to clone is the main repository owned by ArnoldWorldwide (trying to
+take the letter to an unauthorized post office).
+Instead you’ll have to tell git about your forked repository:
+
+    git remote add upstream git@github.com:davidosomething/git-training.git
+
+Replace “davidosomething” with your own username on GitHub. This tells git to
+add a remote repository and refer to it as “upstream.”
+Now that git knows about your fork, you can push to it:
+
+    git push –u upstream master
+
+That will push the stuff in the last commit (letters in the mailbox) to the
+remote repository (the correct post office).
+The “-u” means to set this remote repository (upstream) as the default
+upstream (future “git push”es will automatically go here).
+
 I'll check on your repositories to see when you've gotten here.
